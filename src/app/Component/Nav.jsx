@@ -44,7 +44,7 @@ const Nav = () => {
 
             <div className="flex items-center space-x-4 ml-4">
               <a
-                href="/abdullah.pdf"
+                href="/abdullahDev.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[--dark-hero-bg] text-[--dark-text] px-5 py-2 rounded-xl font-semibold hover:opacity-90 transition-opacity"
@@ -87,7 +87,7 @@ const Nav = () => {
 
             <div className="flex items-center justify-between mt-6 pt-6 border-t border-opacity-20">
               <a
-                href="/abdullah.pdf"
+                href="/abdullahDev.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[--dark-hero-bg] text-[--dark-text] px-5 py-2 rounded-xl font-semibold hover:opacity-90 transition-opacity"

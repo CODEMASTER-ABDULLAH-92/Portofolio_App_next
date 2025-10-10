@@ -118,7 +118,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/muhammad-abdullah-671bb7322/"
+            href="https://www.linkedin.com/in/muhammad-abdullah-4881b2384/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition-transform hover:scale-110 dark:hover:text-blue-400"

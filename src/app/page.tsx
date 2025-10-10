@@ -4,7 +4,6 @@ import About from "./Component/About"
 import Card from "./Component/Card"
 
 import Footer from "./Component/Footer"
-import HireForm from "./Component/HireForm"
 import Projects from "./Component/Projects"
 import Service from "./Component/Servies"
 import Tech  from "./Component/Tech"
@@ -18,12 +17,15 @@ export default function Home() {
     <>
     <Nav/>
     <Hero/>
+
+    
     <Certificates/>
+    <About/>
     {/* <Card/> */}
-    <Projects/>
     <Tech/>
+    <Projects/>
+    <Testimonials/>
     <ContactForm/>
-    {/* <Testimonials/> */}
     <Footer/>
     </>
   );

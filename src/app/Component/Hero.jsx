@@ -132,7 +132,7 @@ const Hero = () => {
               <SiGit className="text-white text-xl" />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/muhammad-abdullah-671bb7322/"
+              href="https://www.linkedin.com/in/muhammad-abdullah-4881b2384/"
               whileHover={{ scale: 1.1 }}
               className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center"
             >
