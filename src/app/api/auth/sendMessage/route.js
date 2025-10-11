@@ -73,7 +73,7 @@ export async function POST(req) {
               In the meantime, feel free to explore my portfolio or connect with me on LinkedIn or GitHub.
             </p>
             <div style="margin-top:20px; text-align:center;">
-              <a href="https://abdullah-kohl.vercel.app/" style="display:inline-block; background:linear-gradient(135deg,#2563eb,#9333ea); color:white; text-decoration:none; padding:12px 28px; border-radius:10px; font-weight:600; font-size:15px;">
+              <a href="https://abdullahdev92.vercel.app/" style="display:inline-block; background:linear-gradient(135deg,#2563eb,#9333ea); color:white; text-decoration:none; padding:12px 28px; border-radius:10px; font-weight:600; font-size:15px;">
                 🌐 Visit My Portfolio
               </a>
             </div>

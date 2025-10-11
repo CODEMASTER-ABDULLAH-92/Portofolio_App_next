@@ -9,7 +9,6 @@ const Nav = () => {
   const navItems = [
     { id: "skill", label: "Skills" },
     { id: "project", label: "Projects" },
-    { id: "services", label: "Services" },
     { id: "contact", label: "Contact" }
   ];
 
@@ -22,7 +21,7 @@ const Nav = () => {
           {/* Logo */}
           <a
             href="/"
-            className="text-2xl font-bold text-[--light-text] hover:opacity-80 transition-opacity duration-400 to-blue-600 from-red-400 bg-gradient-to-r bg-clip-text text-transparent"
+            className="text-2xl font-bold  hover:opacity-80 transition-opacity duration-400 to-blue-600 from-red-400 bg-gradient-to-r bg-clip-text text-transparent"
           >
             Abdullah-dev.
           </a>
