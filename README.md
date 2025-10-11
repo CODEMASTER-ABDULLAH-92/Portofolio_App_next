@@ -29,9 +29,9 @@ This site highlights my journey in web development, including interactive projec
 - Figma (Design)
 
 ## ✨ Features
-⚡ Modern & Responsive Design (Fully mobile-friendly)
-🎨 Smooth animations using Framer Motion
-🧩 Reusable React components
-📬 Contact form integration
-🧠 Showcase of skills and projects
+- ⚡ Modern & Responsive Design (Fully mobile-friendly)
+- 🎨 Smooth animations using Framer Motion
+- 🧩 Reusable React components
+- 📬 Contact form integration
+- 🧠 Showcase of skills and projects
 ---
