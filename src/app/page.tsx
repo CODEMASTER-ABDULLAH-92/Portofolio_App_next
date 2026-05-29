@@ -1,11 +1,11 @@
 import Nav from "./Component/Nav";
 import Hero from "./Component/Hero";
 import About from "./Component/About"
-import Card from "./Component/Card"
+// import Card from "./Component/Card"
 
 import Footer from "./Component/Footer"
 import Projects from "./Component/Projects"
-import Service from "./Component/Servies"
+// import Service from "./Component/Servies"
 import Tech  from "./Component/Tech"
 
 import Certificates from "./Component/Certificates";

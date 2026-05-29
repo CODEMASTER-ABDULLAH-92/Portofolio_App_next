@@ -47,7 +47,7 @@ const socialLinks = [
 // ─── Copy row ─────────────────────────────────────────────────────────────────
 
 const CopyItem = ({
-  icon, label, value, type, accent, glow,
+  icon, label, value, accent, glow,
 }: {
   icon: React.ReactNode;
   label: string;
@@ -301,7 +301,7 @@ const Footer = () => {
               whileTap={{ scale: 0.97 }}
             >
               <MdRocketLaunch />
-              Let's Work Together
+              Let`s Work Together
             </motion.a>
           </motion.div>
         </div>
