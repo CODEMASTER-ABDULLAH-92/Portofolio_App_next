@@ -12,10 +12,10 @@
     "@gsap/react": "^2.1.2",
     "gsap": "^3.13.0",
     "motion": "^12.23.22",
-    "next": "15.5.4",
+    "next": "^16.2.7",
     "nodemailer": "^7.0.9",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
