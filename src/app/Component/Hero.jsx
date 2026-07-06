@@ -313,7 +313,7 @@ const Hero = () => {
           {/* Outer glow ring */}
           <div className="relative">
             {/* Rotating gradient ring */}
-            <motion.div
+            {/* <motion.div
               className="absolute -inset-3 rounded-3xl opacity-40"
               style={{
                 background:
@@ -322,10 +322,10 @@ const Hero = () => {
               }}
               animate={{ rotate: 360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-            />
+            /> */}
 
             {/* Card */}
-            <div className="relative w-[280px] sm:w-[300px] rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm shadow-2xl shadow-black/50">
+            <div className="relative w-[280px] sm:w-[340px] rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm shadow-2xl shadow-black/50">
               {/* Image */}
               <div className="w-full h-[360px] overflow-hidden">
                 <Image

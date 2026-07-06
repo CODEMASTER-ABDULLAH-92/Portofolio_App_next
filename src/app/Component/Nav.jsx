@@ -16,7 +16,7 @@ const Nav = () => {
   
   return (
     <header className="bg-[--light-hero-bg] shadow-md sticky top-0 z-50 py-4 backdrop-blur-md transition-colors duration-300">
-      <div className="container mx-auto max-w-6xl px-4">
+      <div className="container mx-auto max-w-8xl px-4">
         <div className="bg-[--light-hero-bg] flex items-center justify-between rounded-xl border border-opacity-20 p-4 backdrop-blur-sm border-gray-700">
           {/* Logo */}
           <a
