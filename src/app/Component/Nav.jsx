@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { asset } from "../assets/asset";
+import { Menu, X } from "lucide-react";
 
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -54,17 +55,42 @@ const Nav = () => {
           </nav>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            <img
-              src={mobileMenuOpen ? asset.cross_gray : asset.burger}
-              alt="Menu"
-              className="w-8 h-8"
-            />
-          </button>
+<button
+  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+  className={`md:hidden relative p-2 rounded-xl backdrop-blur-md border transition-all duration-300 ease-out
+    hover:scale-110 active:scale-90
+    ${mobileMenuOpen 
+      ? "bg-white/20 border-white/30 shadow-lg shadow-white/10" 
+      : "bg-white/10 border-white/20 hover:bg-white/20"}`}
+  aria-label="Toggle menu"
+>
+  {/* Glow pulse on toggle */}
+  <span
+    className={`absolute inset-0 rounded-xl bg-white/20 transition-all duration-500 ease-out
+      ${mobileMenuOpen ? "scale-100 opacity-0" : "scale-50 opacity-0"}`}
+    style={{
+      animation: mobileMenuOpen ? "ping-once 0.5s ease-out" : "none",
+    }}
+  />
+
+  {/* Icon container — cross-fade + rotate + scale */}
+  <div className="relative w-6 h-6">
+    <Menu
+      size={24}
+      className={`absolute inset-0 text-white transition-all duration-300 ease-out
+        ${mobileMenuOpen
+          ? "opacity-0 rotate-90 scale-50"
+          : "opacity-100 rotate-0 scale-100"}`}
+    />
+    <X
+      size={24}
+      className={`absolute inset-0 text-white transition-all duration-300 ease-out
+        ${mobileMenuOpen
+          ? "opacity-100 rotate-0 scale-100"
+          : "opacity-0 -rotate-90 scale-50"}`}
+    />
+  </div>
+</button>
         </div>
 
         {/* Mobile Navigation */}
