@@ -2,14 +2,56 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiSparkles } from "react-icons/hi2";
-import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
+import { FaGithub, FaCode } from "react-icons/fa";
 import { SiNetlify, SiVercel } from "react-icons/si";
-import { TbStack2 } from "react-icons/tb";
 import { MdRocketLaunch } from "react-icons/md";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const projects = [
+  {
+  title: "Beautyva",
+  description:
+    "A full-stack beauty eCommerce platform where users can browse premium beauty products, view product details, and securely purchase items. Features authentication, product management, responsive UI, and a scalable Next.js backend with MongoDB.",
+  demoUrl: "https://beautyva.vercel.app/",
+  codeUrl: "https://github.com/CODEMASTER-ABDULLAH-92/lumiere", // Replace if your repo URL is different
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "MongoDB",
+    "Mongoose",
+    "Tailwind CSS",
+    "JWT Auth",
+    "Cloudinary",
+    "Vercel"
+  ],
+  accent: "#EC4899",
+  glow: "rgba(236,72,153,0.18)",
+  icon: "💄",
+  type: "Full-Stack",
+  deploy: "vercel",
+},
+{
+  title: "Tally Expense Tracker",
+  description:
+    "A full-stack expense tracking application that helps users manage income and expenses, visualize spending patterns, and monitor financial activities. Includes secure authentication, interactive dashboards, and CRUD operations.",
+  demoUrl: "https://tally-expense-tracker.vercel.app/", // Replace with your actual demo URL
+  codeUrl: "https://github.com/CODEMASTER-ABDULLAH-92/Tally-Expense-tracker", // Replace if different
+  technologies: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT Auth",
+    "Tailwind CSS",
+    "Chart.js"
+  ],
+  accent: "#3B82F6",
+  glow: "rgba(59,130,246,0.18)",
+  icon: "💰",
+  type: "Full-Stack",
+  deploy: "vercel",
+},
   {
     title: "Hire Mate",
     description:
