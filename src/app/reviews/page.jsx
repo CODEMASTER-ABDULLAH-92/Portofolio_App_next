@@ -1,22 +1,20 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaStar, FaStarHalfAlt, FaRegStar, FaUser, FaEnvelope, FaComment, FaPaperPlane } from "react-icons/fa";
+import { 
+  FaStar, 
+  FaStarHalfAlt, 
+  FaRegStar, 
+  FaPaperPlane 
+} from "react-icons/fa";
 import { MdRateReview } from "react-icons/md";
 import AddReviewModal from "../Component/AddReviwModel";
 import Footer from "../Component/Footer";
 import Link from "next/link";
-interface Review {
-  id: string;
-  name: string;
-  email: string;
-  feedback: string;
-  rating: number;
-  createdAt: string;
-}
 
 export default function ReviewsPage() {
-  const [reviews, setReviews] = useState<Review[]>([]);
+  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [averageRating, setAverageRating] = useState(0);
@@ -28,12 +26,12 @@ export default function ReviewsPage() {
   const fetchReviews = async () => {
     try {
       const response = await fetch('/api/reviews');
+      if (!response.ok) throw new Error('Failed to fetch reviews');
       const data = await response.json();
       setReviews(data);
       
-      // Calculate average rating
       if (data.length > 0) {
-        const avg = data.reduce((acc: number, curr: Review) => acc + curr.rating, 0) / data.length;
+        const avg = data.reduce((acc, curr) => acc + curr.rating, 0) / data.length;
         setAverageRating(avg);
       }
     } catch (error) {
@@ -43,7 +41,7 @@ export default function ReviewsPage() {
     }
   };
 
-  const handleAddReview = async (reviewData: { name: string; email: string; feedback: string; rating: number }) => {
+  const handleAddReview = async (reviewData) => {
     try {
       const response = await fetch('/api/reviews', {
         method: 'POST',
@@ -55,10 +53,9 @@ export default function ReviewsPage() {
       
       if (response.ok) {
         const newReview = await response.json();
-        setReviews([newReview, ...reviews]);
-        // Recalculate average
-        const allReviews = [newReview, ...reviews];
-        const avg = allReviews.reduce((acc, curr) => acc + curr.rating, 0) / allReviews.length;
+        const updatedReviews = [newReview, ...reviews];
+        setReviews(updatedReviews);
+        const avg = updatedReviews.reduce((acc, curr) => acc + curr.rating, 0) / updatedReviews.length;
         setAverageRating(avg);
         setIsModalOpen(false);
       }
@@ -67,8 +64,7 @@ export default function ReviewsPage() {
     }
   };
 
-  // Render stars based on rating
-  const renderStars = (rating: number) => {
+  const renderStars = (rating) => {
     const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -90,7 +86,10 @@ export default function ReviewsPage() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+      transition: { 
+        staggerChildren: 0.1, 
+        delayChildren: 0.2 
+      },
     },
   };
 
@@ -99,14 +98,16 @@ export default function ReviewsPage() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.6, ease: "easeOut" as const } 
+      transition: { 
+        duration: 0.6, 
+        ease: "easeOut"
+      } 
     },
   };
 
   return (
     <div className="relative min-h-screen bg-[#050810] overflow-hidden">
       {/* Background Effects */}
-
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-violet-600/10 rounded-full blur-[100px]" />
@@ -129,11 +130,12 @@ export default function ReviewsPage() {
         animate="visible"
       >
         <Link 
-  href="/" 
-  className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-200 mb-4"
->
-  ← Back to Home
-</Link>
+          href="/" 
+          className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-200 mb-4"
+        >
+          ← Back to Home
+        </Link>
+
         {/* Header Section */}
         <motion.div variants={itemVariants} className="text-center mb-12">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase border border-indigo-500/30 bg-indigo-500/10 text-indigo-400 mb-4">
@@ -205,7 +207,7 @@ export default function ReviewsPage() {
           >
             {reviews.map((review, index) => (
               <motion.div
-                key={index}
+                key={review.id || index}
                 variants={itemVariants}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/5"
                 whileHover={{ y: -4 }}
@@ -251,7 +253,6 @@ export default function ReviewsPage() {
         )}
       </motion.div>
 
-      {/* Add Review Modal */}
       <AddReviewModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

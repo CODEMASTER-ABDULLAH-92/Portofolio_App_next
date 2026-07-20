@@ -36,7 +36,7 @@
     "src/app/api/auth/sendMessage/route.js",
     "src/app/Component/Testimonal.jsx",
     ".next/dev/types/**/*.ts"
-  ],
+, "src/app/reviews/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
