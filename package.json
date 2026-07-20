@@ -13,6 +13,7 @@
     "framer-motion": "^12.42.2",
     "gsap": "^3.13.0",
     "lucide-react": "^1.24.0",
+    "mongoose": "^9.7.4",
     "motion": "^12.23.22",
     "next": "^16.2.7",
     "nodemailer": "^7.0.9",

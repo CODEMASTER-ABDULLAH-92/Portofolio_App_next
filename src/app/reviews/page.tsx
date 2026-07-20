@@ -203,9 +203,9 @@ export default function ReviewsPage() {
             initial="hidden"
             animate="visible"
           >
-            {reviews.map((review) => (
+            {reviews.map((review, index) => (
               <motion.div
-                key={review.id}
+                key={index}
                 variants={itemVariants}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/5"
                 whileHover={{ y: -4 }}
